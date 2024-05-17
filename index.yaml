@@ -1,14 +1,216 @@
 apiVersion: v1
 entries:
-  demo-chart:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2024-05-15T15:47:38.967983+05:30"
-    description: A Helm chart for Kubernetes
-    digest: 34f0b7379e644e9a1daf54246411c01c13b70e8189ae4243c85ed0c5bdd94593
-    name: demo-chart
-    type: application
+  apache:
+  - annotations:
+      category: Infrastructure
+      images: |
+        - name: apache
+          image: docker.io/bitnami/apache:2.4.59-debian-12-r4
+        - name: apache-exporter
+          image: docker.io/bitnami/apache-exporter:1.0.7-debian-12-r8
+        - name: git
+          image: docker.io/bitnami/git:2.45.0-debian-12-r2
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 2.4.59
+    created: "2024-05-16T18:23:13.387848+05:30"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Apache HTTP Server is an open-source HTTP server. The goal of this
+      project is to provide a secure, efficient and extensible server that provides
+      HTTP services in sync with the current HTTP standards.
+    digest: 8d41a2b129cecc0e1226ba232fd1c900909b23de17d8706a61ce1e96e6443021
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/apache/img/apache-stack-220x234.png
+    keywords:
+    - apache
+    - http
+    - https
+    - www
+    - web
+    - reverse proxy
+    maintainers:
+    - name: Broadcom, Inc. All Rights Reserved.
+      url: https://github.com/bitnami/charts
+    name: apache
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/apache
     urls:
-    - https://shaileshmehta16.github.io/devtron-helm-charts/charts/demo-chart-0.1.0.tgz
-    version: 0.1.0
-generated: "2024-05-15T15:47:38.966611+05:30"
+    - https://shaileshmehta16.github.io/devtron-helm-charts/charts/apache-11.0.5.tgz
+    version: 11.0.5
+  aspnet-core:
+  - annotations:
+      category: DeveloperTools
+      images: |
+        - name: aspnet-core
+          image: docker.io/bitnami/aspnet-core:8.0.5-debian-12-r0
+        - name: dotnet-sdk
+          image: docker.io/bitnami/dotnet-sdk:8.0.300-debian-12-r0
+        - name: git
+          image: docker.io/bitnami/git:2.45.1-debian-12-r0
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 8.0.5
+    created: "2024-05-16T18:23:13.390795+05:30"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: ASP.NET Core is an open-source framework for web application development
+      created by Microsoft. It runs on both the full .NET Framework, on Windows, and
+      the cross-platform .NET Core.
+    digest: b2a272beffcb84175d50b3bc9630edd7d60de653acd3b49cb1903e0e46cbb71b
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/aspnet-core/img/aspnet-core-stack-220x234.png
+    keywords:
+    - asp.net
+    - dotnet
+    maintainers:
+    - name: Broadcom, Inc. All Rights Reserved.
+      url: https://github.com/bitnami/charts
+    name: aspnet-core
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/aspnet-core
+    urls:
+    - https://shaileshmehta16.github.io/devtron-helm-charts/charts/aspnet-core-6.0.6.tgz
+    version: 6.0.6
+  devtron-generic-helm:
+  - apiVersion: v1
+    appVersion: 0.1.0
+    created: "2024-05-16T18:23:13.391197+05:30"
+    description: Chart to deploy any YAML file
+    digest: d7ccbf00fb7bc529724f6ea7b41a8fe053cdc0573ef27eaa886c5d8f07251691
+    maintainers:
+    - email: prashant@devtron.ai
+      name: Prashant
+    name: devtron-generic-helm
+    urls:
+    - https://shaileshmehta16.github.io/devtron-helm-charts/charts/devtron-generic-helm-0.10.1.tgz
+    version: 0.10.1
+  mariadb:
+  - annotations:
+      category: Database
+      images: |
+        - name: mariadb
+          image: docker.io/bitnami/mariadb:11.3.2-debian-12-r5
+        - name: mysqld-exporter
+          image: docker.io/bitnami/mysqld-exporter:0.15.1-debian-12-r16
+        - name: os-shell
+          image: docker.io/bitnami/os-shell:12-debian-12-r21
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 11.3.2
+    created: "2024-05-16T18:23:13.393464+05:30"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: MariaDB is an open source, community-developed SQL database server
+      that is widely in use around the world due to its enterprise features, flexibility,
+      and collaboration with leading tech firms.
+    digest: 69fd340b4caffc09998e557daa74e4985f3111358f36a368e996938359281b94
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+    keywords:
+    - mariadb
+    - mysql
+    - database
+    - sql
+    - prometheus
+    maintainers:
+    - name: Broadcom, Inc. All Rights Reserved.
+      url: https://github.com/bitnami/charts
+    name: mariadb
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/mariadb
+    urls:
+    - https://shaileshmehta16.github.io/devtron-helm-charts/charts/mariadb-18.0.5.tgz
+    version: 18.0.5
+  memcached:
+  - annotations:
+      category: Infrastructure
+      images: |
+        - name: memcached
+          image: docker.io/bitnami/memcached:1.6.27-debian-12-r2
+        - name: memcached-exporter
+          image: docker.io/bitnami/memcached-exporter:0.14.3-debian-12-r7
+        - name: os-shell
+          image: docker.io/bitnami/os-shell:12-debian-12-r21
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 1.6.27
+    created: "2024-05-16T18:23:13.395882+05:30"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Memcached is an high-performance, distributed memory object caching
+      system, generic in nature, but intended for use in speeding up dynamic web applications
+      by alleviating database load.
+    digest: 313dea5143f26d542884d665ec384a6e493e40e1d1f6422e0baf058503de0fd1
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/memcached/img/memcached-stack-220x234.png
+    keywords:
+    - memcached
+    - cache
+    maintainers:
+    - name: Broadcom, Inc. All Rights Reserved.
+      url: https://github.com/bitnami/charts
+    name: memcached
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/memcached
+    urls:
+    - https://shaileshmehta16.github.io/devtron-helm-charts/charts/memcached-7.0.6.tgz
+    version: 7.0.6
+  nginx:
+  - annotations:
+      category: Infrastructure
+      images: |
+        - name: git
+          image: docker.io/bitnami/git:2.45.0-debian-12-r3
+        - name: nginx
+          image: docker.io/bitnami/nginx:1.26.0-debian-12-r1
+        - name: nginx-exporter
+          image: docker.io/bitnami/nginx-exporter:1.1.0-debian-12-r17
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 1.26.0
+    created: "2024-05-16T18:23:13.397674+05:30"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: NGINX Open Source is a web server that can be also used as a reverse
+      proxy, load balancer, and HTTP cache. Recommended for high-demanding sites due
+      to its ability to provide faster content.
+    digest: 3d5a6953901ce2f845cd93fb51e32da0c4e34fe04bd16773720e5bffc7554836
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/nginx/img/nginx-stack-220x234.png
+    keywords:
+    - nginx
+    - http
+    - web
+    - www
+    - reverse proxy
+    maintainers:
+    - name: Broadcom, Inc. All Rights Reserved.
+      url: https://github.com/bitnami/charts
+    name: nginx
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/nginx
+    urls:
+    - https://shaileshmehta16.github.io/devtron-helm-charts/charts/nginx-17.0.1.tgz
+    version: 17.0.1
+generated: "2024-05-16T18:23:13.385623+05:30"
