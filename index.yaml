@@ -213,4 +213,46 @@ entries:
     urls:
     - https://shaileshmehta16.github.io/devtron-helm-charts/charts/nginx-17.0.1.tgz
     version: 17.0.1
-generated: "2024-05-16T18:23:13.385623+05:30"
+  vault:
+  - annotations:
+      category: Infrastructure
+      images: |
+        - name: os-shell
+          image: docker.io/bitnami/os-shell:12-debian-12-r21
+        - name: vault
+          image: docker.io/bitnami/vault:1.16.2-debian-12-r3
+        - name: vault-csi-provider
+          image: docker.io/bitnami/vault-csi-provider:1.4.2-debian-12-r6
+        - name: vault-k8s
+          image: docker.io/bitnami/vault-k8s:1.4.1-debian-12-r5
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 1.16.2
+    created: "2024-05-20T06:52:41.2493971Z"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Vault is a tool for securely managing and accessing secrets using
+      a unified interface. Features secure storage, dynamic secrets, data encryption
+      and revocation.
+    digest: b1a12bdbcda05fbc2e79584be81a02f1b5af89e2074d0fc94401cebaa9f0cf0a
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/vault/img/vault-stack-220x234.png
+    keywords:
+    - security
+    - secrets
+    - injection
+    - vault
+    maintainers:
+    - name: Broadcom, Inc. All Rights Reserved.
+      url: https://github.com/bitnami/charts
+    name: vault
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/vault
+    urls:
+    - https://github.com/devtron-labs/helm-pilot/releases/download/vault-1.2.1/vault-1.2.1.tgz
+    version: 1.2.1
+generated: "2024-05-20T06:52:41.249405806Z"
