@@ -1,5 +1,47 @@
 apiVersion: v1
 entries:
+  apache:
+  - annotations:
+      category: Infrastructure
+      images: |
+        - name: apache
+          image: docker.io/bitnami/apache:2.4.59-debian-12-r4
+        - name: apache-exporter
+          image: docker.io/bitnami/apache-exporter:1.0.7-debian-12-r8
+        - name: git
+          image: docker.io/bitnami/git:2.45.1-debian-12-r0
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 2.4.59
+    created: "2024-05-28T08:26:25.665565279Z"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Apache HTTP Server is an open-source HTTP server. The goal of this
+      project is to provide a secure, efficient and extensible server that provides
+      HTTP services in sync with the current HTTP standards.
+    digest: b945810246ee657200bf0fbaf2f2d6f90b24df76e4c017f8a182ab44735676f5
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/apache/img/apache-stack-220x234.png
+    keywords:
+    - apache
+    - http
+    - https
+    - www
+    - web
+    - reverse proxy
+    maintainers:
+    - name: Broadcom, Inc. All Rights Reserved.
+      url: https://github.com/bitnami/charts
+    name: apache
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/apache
+    urls:
+    - https://github.com/devtron-labs/helm-pilot/releases/download/apache-11.0.7/apache-11.0.7.tgz
+    version: 11.0.7
   memcached:
   - annotations:
       category: Infrastructure
@@ -38,4 +80,4 @@ entries:
     urls:
     - https://github.com/devtron-labs/helm-pilot/releases/download/memcached-7.4.1/memcached-7.4.1.tgz
     version: 7.4.1
-generated: "2024-05-28T08:04:54.825226561Z"
+generated: "2024-05-28T08:26:25.665575498Z"
